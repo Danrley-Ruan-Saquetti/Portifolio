@@ -1,0 +1,62 @@
+@use "global" as *;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+#app {
+    width: 100vw;
+    min-height: 100vh;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-size: 1.6rem;
+    background-color: $primary-color-darken;
+    background-repeat: no-repeat;
+    overflow: overlay;
+    overflow-x: hidden;
+    * {
+        font-family: "Exo", sans-serif;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+a,
+button {
+    color: #fff;
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+::-webkit-scrollbar {
+    background: transparent;
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: $border-radius;
+    background-color: #fff;
+    &:hover {
+        background-color: $neutro-color;
+    }
+    &:active {
+        background-color: darken($neutro-color, 20);
+    }
+}

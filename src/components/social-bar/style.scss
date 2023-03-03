@@ -1,0 +1,14 @@
+@use "../../styles/global" as *;
+.social-bar {
+    .social-links {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 1rem;
+        background: transparent;
+        list-style: none;
+        border-radius: $border-radius;
+        padding: .5rem;
+        padding-inline: 2rem;
+    }
+}

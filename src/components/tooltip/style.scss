@@ -1,0 +1,66 @@
+@use "../../styles/global" as *;
+@mixin visible-tooltip {
+    visibility: visible;
+    opacity: 1;
+    &.right {
+        left: 135%;
+    }
+    &.top {
+        bottom: 135%;
+    }
+    &.bottom {
+        top: 135%;
+    }
+    &.left {
+        right: 135%;
+    }
+}
+
+.tooltip-content {
+    position: relative;
+    text-transform: capitalize;
+    &:hover {
+        .tooltip {
+            @include visible-tooltip;
+        }
+    }
+}
+
+.tooltip {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    padding: 1rem 1.5rem;
+    background: transparent;
+    text-align: center;
+    transition: $transition-all;
+    pointer-events: none;
+    z-index: 500;
+    font-size: 1.6rem;
+    white-space: nowrap;
+    background-color: #fff;
+    border-radius: $border-radius;
+    font-weight: 500;
+    color: #000;
+    filter: drop-shadow(9px 6px 2px rgba(0, 0, 0, .5));
+    &.right {
+        left: 125%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &.top {
+        bottom: 125%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &.bottom {
+        top: 125%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &.left {
+        right: 125%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

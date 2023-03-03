@@ -1,0 +1,10 @@
+@use "../../styles/global" as *;
+.session {
+    position: relative;
+    min-height: 90vh;
+    color: #fff;
+    padding: min(18%, 3rem);
+    * {
+        z-index: 100;
+    }
+}

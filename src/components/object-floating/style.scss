@@ -1,0 +1,67 @@
+@use "../../styles/global" as *;
+.object-floating {
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate, normal, normal;
+    &.component {
+        animation-name: floating;
+        animation-duration: 5s;
+    }
+    &.object {
+        position: absolute;
+        background-color: $primary-color;
+        z-index: -10;
+        pointer-events: none;
+        filter: drop-shadow(12px 8px 3px $primary-color-darken) drop-shadow(12px 8px 3px #000);
+        &.circle {
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            animation-name: floating, rotate, fancy-border;
+        }
+        &.cubic {
+            border-radius: $border-radius;
+            animation-name: floating;
+        }
+    }
+}
+
+@for $i from 1 through 13 {
+    .object-floating:nth-child(3n + #{$i}) {
+        animation-duration: clamp(7, random(15), 15) + s, clamp(7, random(15), 15) + s, clamp(7, random(15), 15) + s !important;
+    }
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(-1rem);
+    }
+    50% {
+        transform: translateY(1rem);
+    }
+    100% {
+        transform: translateY(-1rem);
+    }
+}
+
+@keyframes fancy-border {
+    0% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        transform: translateY(-1rem);
+    }
+    50% {
+        border-radius: 56% 44% 38% 62% / 68% 21% 79% 32%;
+        transform: translateY(1rem);
+    }
+    100% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        transform: translateY(-1rem);
+    }
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(0deg);
+    }
+    from {
+        transform: rotate(360deg);
+    }
+}

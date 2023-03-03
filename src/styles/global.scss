@@ -1,0 +1,26 @@
+// Palette Color
+$neutro-color: #bdbdbd;
+$main-color: #9000df;
+$primary-color: #360745;
+$primary-color-lighten: lighten($primary-color, 20);
+$primary-color-darken: darken($primary-color, 10);
+$secondary-color: #d61c59;
+$secondary-color-lighten: lighten($secondary-color, 20);
+$secondary-color-darken: darken($secondary-color, 10);
+$tertiary-color: #e7d84b;
+$tertiary-color-lighten: lighten($tertiary-color, 20);
+$tertiary-color-darken: darken($tertiary-color, 10);
+$quaternary-color: #efeac5;
+$quaternary-color-lighten: lighten($quaternary-color, 20);
+$quaternary-color-darken: darken($quaternary-color, 10);
+$quinary-color: #1b8798;
+$quinary-color-lighten: lighten($quinary-color, 20);
+$quinary-color-darken: darken($quinary-color, 10);
+$sextuary-color: #101330;
+$sextuary-color-lighten: lighten($sextuary-color, 20);
+$sextuary-color-darken: darken($sextuary-color, 10);
+// Template
+$border: 1px solid $neutro-color;
+$border-radius: .5rem;
+$transition-time: .3s;
+$transition-all: all $transition-time ease;

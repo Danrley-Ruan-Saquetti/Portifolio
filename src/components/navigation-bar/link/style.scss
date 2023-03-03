@@ -1,0 +1,35 @@
+@use "../../../styles/global" as *;
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: $transition-all;
+    &.active {
+        background-color: $primary-color;
+        a {
+            color: #fff;
+        }
+    }
+    &:active {
+        background-color: $primary-color-darken;
+        a {
+            color: #fff;
+        }
+    }
+    &:hover {
+        transform: translateY(-2px);
+    }
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 5rem;
+        height: 5rem;
+        color: $primary-color;
+        transition: $transition-all;
+        .link-icon {
+            font-size: 2.2rem;
+        }
+    }
+}

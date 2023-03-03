@@ -1,0 +1,28 @@
+@use "../../../styles/global" as *;
+.link-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: $transition-all;
+    &:hover {
+        transform: translateY(-2px);
+        background-color: $primary-color;
+        .link-icon {
+            color: #fff;
+        }
+    }
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 5rem;
+        height: 5rem;
+        transition: $transition-all;
+        .link-icon {
+            color: $primary-color;
+            font-size: 3rem;
+            transition: $transition-all;
+        }
+    }
+}

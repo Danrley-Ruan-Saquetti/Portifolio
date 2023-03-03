@@ -1,0 +1,23 @@
+@use "../../styles/global" as *;
+.navigation-bar {
+    position: fixed;
+    bottom: 2rem;
+    left: 50vw;
+    transform: translateX(-50%);
+    opacity: 1;
+    transition: opacity $transition-time ease .2s;
+    pointer-events: all;
+    filter: drop-shadow(10px 7px 2px rgba(0, 0, 0, .5));
+    z-index: 550;
+    .nav-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        background-color: #fff;
+        list-style: none;
+        border-radius: $border-radius;
+        padding: .5rem;
+        padding-inline: 2rem;
+    }
+}
